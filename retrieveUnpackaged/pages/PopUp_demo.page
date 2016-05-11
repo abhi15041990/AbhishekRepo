@@ -1,0 +1,4 @@
+<apex:page sidebar="false">
+  <link href="{!URLFOR($Resource.bootStrap, 'bootstrap/css/bootstrap.min.css')}" rel="stylesheet" media="screen"/>
+  <apex:includeScript value="{!URLFOR($Resource.bootstrap, 'js/bootstrap.min.js')}"/>
+</apex:page>

@@ -1,0 +1,29 @@
+<apex:page controller="WrapperClassController">
+<apex:form >
+    <apex:pageblock title="select Contact">
+    <apex:pageblock >
+    <apex:pageblockbuttons >
+       <apex:commandbutton value="Process selected" action="{!processSelected}" rerender="table,table1"/> 
+    </apex:pageblockbuttons>
+    <apex:pageblocktable value="{!Contacts}" var="c" id="table">
+        <apex:column >
+        <apex:inputCheckbox value="{!c.selected}"/>
+        </apex:column>
+        <apex:column value="{!c.con.Name}" />
+        <apex:column value="{!c.con.Email}" />
+        <apex:column value="{!c.con.Phone}" />
+    </apex:pageblocktable>
+    </apex:pageblock>
+        <apex:pageblocktable value="{!Contacts}" var="c" id="table1">
+        <apex:column >
+        <apex:inputCheckbox value="{!c.selected}"/>
+        </apex:column>
+        <apex:column value="{!c.con.Name}" />
+        <apex:column value="{!c.con.Email}" />
+        <apex:column value="{!c.con.Phone}" />
+    </apex:pageblocktable>
+    <apex:pageblock >
+    </apex:pageblock>
+    </apex:pageblock>
+</apex:form>
+</apex:page>
